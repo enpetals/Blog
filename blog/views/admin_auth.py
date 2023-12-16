@@ -82,6 +82,8 @@ def handle_login_admin():
   
   # CREATE ADMIN LOGIN SESSION
   session["ADMIN_LOGIN"] = admin.get("email")
+  session["ADMIN_NAME"] = admin.get("name")
+
 
   flash("login successful", "success")
   return redirect("/owner/dashboard")
